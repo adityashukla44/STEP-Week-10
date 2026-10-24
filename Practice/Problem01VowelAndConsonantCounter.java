@@ -1,0 +1,19 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Problem01VowelAndConsonantCounter {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String word = sc.next().toLowerCase(Locale.ROOT);
+        int vowels = 0, consonants = 0;
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+            if (ch >= 'a' && ch <= 'z') {
+                if ("aeiou".indexOf(ch) >= 0) vowels++;
+                else consonants++;
+            }
+        }
+        System.out.println("Vowels: " + vowels);
+        System.out.println("Consonants: " + consonants);
+    }
+}
